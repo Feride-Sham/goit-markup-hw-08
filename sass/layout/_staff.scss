@@ -1,0 +1,55 @@
+.staff {
+  background-color: #f5f4fa;
+
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+
+  h3 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 15px;
+    margin-top: 0px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+  }
+}
+
+.staff .staff-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .item {
+    width: calc((100% - 3 * 30px) / 4);
+    margin-right: 30px;
+    padding-bottom: 24px;
+    background-color: $title-text-color;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+  }
+
+  .item:nth-child(4n) {
+    margin-right: 0px;
+  }
+}
+
+.staff-img {
+  margin-bottom: 30px;
+}

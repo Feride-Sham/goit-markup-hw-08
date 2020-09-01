@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebStudio</title>
+    <link rel="stylesheet" href="./css/portfolio.min.css" />
+  </head>
+
+  <body>
+    <!-- Шапка с навигацией-->
+    <header>
+      <!--навигация по сайту-->
+      <div class="container main-nav">
+        <nav class="navigation main-nav">
+          <a class="logo" href="./">
+            <span class="logo-web">Web</span> Studio
+          </a>
+
+          <ul class="list site-nav">
+            <li class="item">
+              <a href="./index.html" class="nav-link">Студия</a>
+            </li>
+            <li class="item">
+              <a href="./portfolio.html" class="nav-link current">Портфолио</a>
+            </li>
+            <li class="item"><a href="" class="nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <!--контакты для связи-->
+
+        <ul class="list nav-contacts">
+          <li class="item item-mail">
+            <a href="mailto:info@devstudio.com " class="contacts">
+              <svg class="icon-mail" width="16px" height="11px">
+                <use href="./image/symbol-defs.svg#icon-mail"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="item item-phone">
+            <a href="tel:+380961111111 " class="contacts">
+              <svg class="icon-mail" width="10px" height="15px">
+                <use href="./image/symbol-defs.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="portfolio container sections">
+        <h1 class="invisible-title">Портфолио</h1>
+
+        <!--Фильтры-->
+
+        <ul class="list list-button">
+          <li class="item">
+            <button type="button" class="portfolio-button">Все</button>
+          </li>
+          <li class="item">
+            <button type="button" class="portfolio-button">Веб-сайты</button>
+          </li>
+          <li class="item">
+            <button type="button" class="portfolio-button">Приложения</button>
+          </li>
+          <li class="item">
+            <button type="button" class="portfolio-button">Дизайн</button>
+          </li>
+          <li class="item">
+            <button type="button" class="portfolio-button">Маркетинг</button>
+          </li>
+        </ul>
+
+        <!--Галерея-->
+
+        <ul class="list gallery">
+          <li class="gallery-item">
+            <a class="gallery-link" href="#">
+              <div class="box-card">
+                <img
+                  src="./image/portfolio/tehno.jpg"
+                  alt="Платформа для цифрового шпионажа"
+                  width="370"
+                />
+                <div class="box-hover">
+                  <p class="text">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-title">
+                <h2>Технокряк</h2>
+                <p>Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="gallery-item">
+            <a class="gallery-link" href="#">
+              <div class="box-card">
+                <img
+                  src="./image/portfolio/busket.jpg"
+                  alt="Баскетбол"
+                  width="370"
+                />
+                <div class="box-hover">
+                  <p class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempore, hic possimus. Veritatis tempora illum
+                    necessitatibus quod velit repellendus inventore in
+                    reiciendis, dolorum voluptatum neque atque ullam nemo
+                    dolores magnam eius.
+                  </p>
+                </div>
+              </div>
+              <div class="card-title">
+                <h2>Постер New Orlean vs Golden Star</h2>
+                <p>Дизайн</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="gallery-item">
+            <a class="gallery-link" href="#"
+              ><div class="box-card">
+                <img
+                  src="./image/portfolio/seafood.jpg"
+                  alt="Ресторан морской кухни"
+                  width="370"
+                />
+                <div class="box-hover">
+                  <p class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempore, hic possimus. Veritatis tempora illum
+                    necessitatibus quod velit repellendus inventore in
+                    reiciendis, dolorum voluptatum neque atque ullam nemo
+                    dolores magnam eius.
+                  </p>
+                </div>
+              </div>
+              <div class="card-title">
+                <h2>Ресторан Seafood</h2>
+                <p>Приложение</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="gallery-item">
+            <a class="gallery-link" href="#"
+              ><div class="box-card">
+                <img
+                  src="./image/portfolio/headphones.jpg"
+                  alt="Наушники"
+                  width="370"
+                />
+                <div class="box-hover">
+                  <p class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempore, hic possimus. Veritatis tempora illum
+                    necessitatibus quod velit repellendus inventore in
+                    reiciendis, dolorum voluptatum neque atque ullam nemo
+                    dolores magnam eius.
+                  </p>
+                </div>
+              </div>
+              <div class="card-title">
+                <h2>Проект Prime</h2>
+                <p>Маркетинг</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="gallery-item">
+            <a class="gallery-link" href="#"
+              ><div class="box-card">
+                <img
+                  src="./image/portfolio/boxes.jpg"
+                  alt="Коробочки"
+                  width="370"
+                />
+                <div class="box-hover">
+                  <p class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempore, hic possimus. Veritatis tempora illum
+                    necessitatibus quod velit repellendus inventore in
+                    reiciendis, dolorum voluptatum neque atque ullam nemo
+                    dolores magnam eius.
+                  </p>
+                </div>
+              </div>
+              <div class="card-title">
+                <h2>Проект Boxes</h2>
+                <p>Приложение</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="gallery-item">
+            <a class="gallery-link" href="#"
+              ><div class="box-card">
+                <img
+                  src="./image/portfolio/monitor.jpg"
+                  alt="Монитор"
+                  width="370"
+                />
+                <div class="box-hover">
+                  <p class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempore, hic possimus. Veritatis tempora illum
+                    necessitatibus quod velit repellendus inventore in
+                    reiciendis, dolorum voluptatum neque atque ullam nemo
+                    dolores magnam eius.
+                  </p>
+                </div>
+              </div>
+              <div class="card-title">
+                <h2>Inspiration has no Borders</h2>
+                <p>Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="gallery-item">
+            <a class="gallery-link" href="#"
+              ><div class="box-card">
+                <img src="./image/portfolio/book.jpg" alt="Книга" width="370" />
+                <div class="box-hover">
+                  <p class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempore, hic possimus. Veritatis tempora illum
+                    necessitatibus quod velit repellendus inventore in
+                    reiciendis, dolorum voluptatum neque atque ullam nemo
+                    dolores magnam eius.
+                  </p>
+                </div>
+              </div>
+              <div class="card-title">
+                <h2>Inspiration has no Borders</h2>
+                <p>Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="gallery-item">
+            <a class="gallery-link" href="#"
+              ><div class="box-card">
+                <img src="./image/portfolio/lab.jpg" alt="Лейбл" width="370" />
+                <div class="box-hover">
+                  <p class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempore, hic possimus. Veritatis tempora illum
+                    necessitatibus quod velit repellendus inventore in
+                    reiciendis, dolorum voluptatum neque atque ullam nemo
+                    dolores magnam eius.
+                  </p>
+                </div>
+              </div>
+              <div class="card-title">
+                <h2>Проект LAB</h2>
+                <p>Маркетинг</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="gallery-item">
+            <a class="gallery-link" href="#"
+              ><div class="box-card">
+                <img
+                  src="./image/portfolio/business.jpg"
+                  alt="Бизнес"
+                  width="370"
+                />
+                <div class="box-hover">
+                  <p class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Tempore, hic possimus. Veritatis tempora illum
+                    necessitatibus quod velit repellendus inventore in
+                    reiciendis, dolorum voluptatum neque atque ullam nemo
+                    dolores magnam eius.
+                  </p>
+                </div>
+              </div>
+              <div class="card-title">
+                <h2>Growing Business</h2>
+                <p>Приложение</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+      <div class="container">
+        <div class="navigation footer-box">
+          <a href="./" class="logo">
+            <span class="logo-web">Web</span> Studio
+          </a>
+          <address>
+            <p>г. Киев, пр-т Леси Украинки, 26</p>
+
+            <ul class="list">
+              <li>
+                <a href="mailto:info@devstudio.com " class="footer-contacts"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li>
+                <a href="tel:+380961111111 " class="footer-contacts"
+                  >+38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
+
+        <div class="footer-box">
+          <b>Присоединяйтесь</b>
+          <ul class="networks list">
+            <li class="icon">
+              <a
+                class="icon-netw icon-inst"
+                href=""
+                aria-label="Ссылка на Инстаграмм"
+              >
+                <svg width="20" height="20" class="icon-instagram">
+                  <use href="./image/symbol-defs.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon">
+              <a
+                class="icon-netw icon-twit"
+                href=""
+                aria-label="Ссылка на Твиттер"
+              >
+                <svg width="20" height="20" class="icon-twitter">
+                  <use href="./image/symbol-defs.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon">
+              <a
+                class="icon-netw icon-fb"
+                href=""
+                aria-label="Ссылка на Фейсбук"
+                ><svg width="20" height="20" class="icon-facebook">
+                  <use href="./image/symbol-defs.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon">
+              <a
+                class="icon-netw icon-link"
+                href=""
+                aria-label="Ссылка на Линкедин"
+              >
+                <svg width="20" height="20" class="icon-linkedin">
+                  <use href="./image/symbol-defs.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-box sign-form">
+          <b>Подпишитесь на рассылку</b>
+          <div class="footer-sign-form">
+            <form class="footer-form">
+              <input type="email" name="email" placeholder="E-mail" />
+            </form>
+            <a href="#" class="button">Подписаться</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/modal.js"></script>
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
+  </body>
+</html>

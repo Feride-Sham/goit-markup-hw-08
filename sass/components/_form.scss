@@ -1,0 +1,135 @@
+.form-section {
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    outline-color: $accent-color;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  }
+
+  input {
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 12px 12px 12px 42px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.form-title {
+  padding: 0;
+  margin-bottom: 12px;
+  margin-top: 0;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: $secondary-text-color;
+}
+
+.form-list {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 0px;
+  list-style: none;
+
+  label {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+  }
+}
+
+.field {
+  position: relative;
+}
+
+.icon-modal {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-section input:focus ~ .icon-modal {
+  fill: #2196f3;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment-window {
+  resize: none;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.checkbox-label {
+  display: inline-flex;
+  margin-bottom: 30px;
+
+  input {
+    height: 15px;
+    width: 15px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  a {
+    color: $accent-color;
+  }
+}
+
+.checkbox {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.checkbox:checked + .checkbox-icon {
+  border-color: $accent-color;
+  background-color: $accent-color;
+  background-image: url(../image/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.agree {
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}

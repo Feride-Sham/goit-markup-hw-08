@@ -1,0 +1,53 @@
+.examples {
+  padding-top: 0px;
+
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+
+  h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+
+    color: $title-text-color;
+    background: rgba(47, 48, 58, 0.8);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.example-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.example-item {
+  position: relative;
+  width: calc((100% - 2 * 30px) / 3);
+  margin-right: 30px;
+
+  &:nth-child(3n) {
+    margin-right: 0px;
+  }
+
+  img {
+    display: block;
+  }
+}
