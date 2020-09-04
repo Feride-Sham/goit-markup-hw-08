@@ -3,12 +3,18 @@
 
   h2 {
     margin-top: 0px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
+
     line-height: 1.17;
     text-align: center;
+
+    @include for-size(desktop) {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
   }
 
   h3 {
@@ -33,23 +39,47 @@
 }
 
 .staff .staff-list {
-  display: flex;
-  flex-wrap: wrap;
+  @include for-size(tablet-landscape) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .item {
-    width: calc((100% - 3 * 30px) / 4);
-    margin-right: 30px;
     padding-bottom: 24px;
     background-color: $title-text-color;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 1px 3px rgba(0, 0, 0, 0.12);
+
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+
+    @include for-size(tablet-landscape) {
+      width: calc((100% - 1 * 30px) / 2);
+      margin-right: 30px;
+    }
+
+    @include for-size(desktop) {
+      width: calc((100% - 3 * 30px) / 4);
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    .item:nth-child(2n) {
+      margin-right: 0px;
+    }
   }
 
   .item:nth-child(4n) {
-    margin-right: 0px;
+    @include for-size(desktop) {
+      margin-right: 0px;
+    }
   }
 }
 
 .staff-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
 }

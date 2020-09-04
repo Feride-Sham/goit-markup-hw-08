@@ -314,6 +314,7 @@ body {
 h2,
 h3 {
   color: #212121;
+  margin: 0px;
 }
 
 .list {
@@ -436,8 +437,15 @@ h3 {
 }
 
 .sections {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 1200px) {
+  .sections {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 header {
