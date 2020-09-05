@@ -394,16 +394,24 @@ p {
 }
 
 .logo {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 24px;
   padding-bottom: 25px;
   color: #212121;
   text-decoration: none;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
 }
 
 .logo-web {
@@ -461,15 +469,94 @@ header {
           align-items: center;
 }
 
-.site-nav {
+@media screen and (max-width: 767px) {
+  .main-nav {
+    display: none;
+  }
+}
+
+.header-mobil {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 85px;
+  position: relative;
 }
 
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 767px) {
+  .header-mobil {
+    display: none;
+  }
+}
+
+.menu-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-menu {
+  display: none;
+}
+
+.menu-button.is-open .icon-menu {
+  display: block;
+}
+
+.menu-button.is-open .icon-cross {
+  display: none;
+}
+
+.menu-button:hover .icon-menu,
+.menu-button:hover .icon-cross,
+.menu-button:focus .icon-menu,
+.menu-button:focus .icon-cross {
+  fill: #2196f3;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 60px;
+  text-align: center;
+}
+
+.menu-container.is-open {
+  display: block;
+}
+
+.site-nav {
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 85px;
+    margin-bottom: 0px;
+  }
+  .site-nav .item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .site-nav .current::after {
@@ -485,17 +572,24 @@ header {
 
 .nav-link {
   position: relative;
-  display: block;
+  display: inline-block;
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 8px;
   color: #212121;
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  .nav-link {
+    margin-bottom: 0px;
+    padding-bottom: 32px;
+  }
 }
 
 .nav-link .current {
@@ -506,22 +600,40 @@ header {
   color: #2196f3;
 }
 
+@media (min-width: 768px) {
+  .nav-link {
+    font-size: 14px;
+  }
+}
+
 .nav-contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-left: auto;
 }
 
+@media (min-width: 1200px) {
+  .nav-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .nav-contacts .item + .item {
-  margin-left: 30px;
+  margin-top: 10px;
+}
+
+@media (min-width: 1200px) {
+  .nav-contacts .item + .item {
+    margin-top: 0px;
+    margin-left: 30px;
+  }
 }
 
 .contacts {
   color: #757575;
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   -webkit-box-align: center;
@@ -533,6 +645,12 @@ header {
 
 .contacts:hover, .contacts:focus {
   color: #2196f3;
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    font-size: 14px;
+  }
 }
 
 .icon-mail {

@@ -1,9 +1,14 @@
 .site-nav {
-  display: flex;
-  margin-left: 85px;
+  margin-bottom: 60px;
 
-  .item:not(:last-child) {
-    margin-right: 50px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 85px;
+    margin-bottom: 0px;
+
+    .item:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 
   .current::after {
@@ -20,14 +25,19 @@
 
 .nav-link {
   position: relative;
-  display: block;
+  display: inline-block;
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 8px;
   color: $secondary-text-color;
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.14;
+
+  @include for-size(tablet-landscape) {
+    margin-bottom: 0px;
+    padding-bottom: 32px;
+  }
 
   letter-spacing: 0.02em;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -40,22 +50,33 @@
   &:focus {
     color: $accent-color;
   }
+
+  @include for-size(tablet-landscape) {
+    font-size: 14px;
+  }
 }
 
 .nav-contacts {
-  display: flex;
   margin-left: auto;
+
+  @include for-size(desktop) {
+    display: flex;
+  }
 }
 
 .nav-contacts .item + .item {
-  margin-left: 30px;
+  margin-top: 10px;
+  @include for-size(desktop) {
+    margin-top: 0px;
+    margin-left: 30px;
+  }
 }
 
 .contacts {
   color: $main-text-color;
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   align-items: center;
@@ -64,6 +85,10 @@
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+
+  @include for-size(tablet-landscape) {
+    font-size: 14px;
   }
 }
 
