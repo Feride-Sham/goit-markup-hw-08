@@ -328,6 +328,11 @@ p {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
