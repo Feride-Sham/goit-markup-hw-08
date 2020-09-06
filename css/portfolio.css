@@ -536,6 +536,7 @@ header {
   background-color: #ffffff;
   padding: 60px;
   text-align: center;
+  z-index: 1;
 }
 
 .menu-container.is-open {
@@ -706,14 +707,29 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 50px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.list-button .item:nth-child(-n + 3) {
+  margin-bottom: 15px;
 }
 
 .list-button .item:not(:last-child) {
   margin-right: 8px;
+}
+
+@media (min-width: 768px) {
+  .list-button {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 0px;
+  }
 }
 
 .portfolio a {
@@ -762,18 +778,49 @@ header {
   line-height: 1.87;
 }
 
-.portfolio ul.gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media (min-width: 768px) {
+  .portfolio ul.gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .gallery-item {
-  width: calc((100% - 2 * 30px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .gallery-item {
+    width: calc((100% - 1 * 30px) / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-item {
+    width: calc((100% - 2 * 30px) / 3);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .gallery-item:nth-child(2n) {
+    margin-right: 0px;
+  }
+  .gallery .item:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-item:nth-child(3n) {
+    margin-right: 0px;
+  }
+  .gallery .item:nth-last-child(-n + 3) {
+    margin-bottom: 0px;
+  }
 }
 
 .gallery-link:hover {
@@ -840,14 +887,6 @@ header {
   display: block;
 }
 
-.gallery-item:nth-child(3n) {
-  margin-right: 0px;
-}
-
-.gallery .item:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
-}
-
 .invisible-title {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -885,6 +924,7 @@ header {
 }
 
 .footer .logo {
+  display: inline-block;
   padding-bottom: 0px;
   padding-top: 0px;
   color: #ffffff;

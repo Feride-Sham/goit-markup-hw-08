@@ -56,10 +56,6 @@ header {
   fill: $accent-color;
 }
 
-// .nav-mobile {
-//   display: flex;
-// }
-
 .menu-container {
   display: none;
   position: absolute;
@@ -69,6 +65,7 @@ header {
   background-color: $title-text-color;
   padding: 60px;
   text-align: center;
+  z-index: 1;
 
   &.is-open {
     display: block;

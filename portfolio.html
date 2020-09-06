@@ -10,7 +10,58 @@
   <body>
     <!-- Шапка с навигацией-->
     <header>
-      <!--навигация по сайту-->
+      <div class="container header-mobil">
+        <a class="logo" href="./"> <span class="logo-web">Web</span> Studio </a>
+        <button
+          type="button"
+          class="menu-button is-open"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg
+            width="24"
+            height="16"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon-menu" href="./image/mob.svg#icon-menu"></use>
+            <use class="icon-cross" href="./image/mob.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav>
+            <ul class="list site-nav">
+              <li class="item">
+                <a href="./index.html" class="nav-link">Студия</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="nav-link current"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="item"><a href="" class="nav-link">Контакты</a></li>
+            </ul>
+            <ul class="list nav-contacts">
+              <li class="item item-mail">
+                <a href="mailto:info@devstudio.com " class="contacts">
+                  <svg class="icon-mail" width="16px" height="11px">
+                    <use href="./image/symbol-defs.svg#icon-mail"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="item item-phone">
+                <a href="tel:+380961111111 " class="contacts">
+                  <svg class="icon-mail" width="10px" height="15px">
+                    <use href="./image/symbol-defs.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
       <div class="container main-nav">
         <nav class="navigation main-nav">
           <a class="logo" href="./">
@@ -27,8 +78,6 @@
             <li class="item"><a href="" class="nav-link">Контакты</a></li>
           </ul>
         </nav>
-
-        <!--контакты для связи-->
 
         <ul class="list nav-contacts">
           <li class="item item-mail">
@@ -82,7 +131,7 @@
             <a class="gallery-link" href="#">
               <div class="box-card">
                 <img
-                  src="./image/portfolio/tehno.jpg"
+                  src="./image/portfolio/desktop/tehno.jpg"
                   alt="Платформа для цифрового шпионажа"
                   width="370"
                 />
@@ -106,7 +155,7 @@
             <a class="gallery-link" href="#">
               <div class="box-card">
                 <img
-                  src="./image/portfolio/busket.jpg"
+                  src="./image/portfolio/desktop/busket.jpg"
                   alt="Баскетбол"
                   width="370"
                 />
@@ -131,7 +180,7 @@
             <a class="gallery-link" href="#"
               ><div class="box-card">
                 <img
-                  src="./image/portfolio/seafood.jpg"
+                  src="./image/portfolio/desktop/seafood.jpg"
                   alt="Ресторан морской кухни"
                   width="370"
                 />
@@ -156,7 +205,7 @@
             <a class="gallery-link" href="#"
               ><div class="box-card">
                 <img
-                  src="./image/portfolio/headphones.jpg"
+                  src="./image/portfolio/desktop/headphones.jpg"
                   alt="Наушники"
                   width="370"
                 />
@@ -181,7 +230,7 @@
             <a class="gallery-link" href="#"
               ><div class="box-card">
                 <img
-                  src="./image/portfolio/boxes.jpg"
+                  src="./image/portfolio/desktop/boxes.jpg"
                   alt="Коробочки"
                   width="370"
                 />
@@ -206,7 +255,7 @@
             <a class="gallery-link" href="#"
               ><div class="box-card">
                 <img
-                  src="./image/portfolio/monitor.jpg"
+                  src="./image/portfolio/desktop/monitor.jpg"
                   alt="Монитор"
                   width="370"
                 />
@@ -230,7 +279,11 @@
           <li class="gallery-item">
             <a class="gallery-link" href="#"
               ><div class="box-card">
-                <img src="./image/portfolio/book.jpg" alt="Книга" width="370" />
+                <img
+                  src="./image/portfolio/desktop/book.jpg"
+                  alt="Книга"
+                  width="370"
+                />
                 <div class="box-hover">
                   <p class="text">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -251,7 +304,11 @@
           <li class="gallery-item">
             <a class="gallery-link" href="#"
               ><div class="box-card">
-                <img src="./image/portfolio/lab.jpg" alt="Лейбл" width="370" />
+                <img
+                  src="./image/portfolio/desktop/lab.jpg"
+                  alt="Лейбл"
+                  width="370"
+                />
                 <div class="box-hover">
                   <p class="text">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -273,7 +330,7 @@
             <a class="gallery-link" href="#"
               ><div class="box-card">
                 <img
-                  src="./image/portfolio/business.jpg"
+                  src="./image/portfolio/desktop/business.jpg"
                   alt="Бизнес"
                   width="370"
                 />
@@ -300,75 +357,77 @@
     <!-- Футер -->
     <footer class="footer">
       <div class="container">
-        <div class="navigation footer-box">
-          <a href="./" class="logo">
-            <span class="logo-web">Web</span> Studio
-          </a>
-          <address>
-            <p>г. Киев, пр-т Леси Украинки, 26</p>
+        <div class="for-tablet">
+          <div class="navigation footer-box">
+            <a href="./" class="logo">
+              <span class="logo-web">Web</span>Studio
+            </a>
+            <address>
+              <p>г. Киев, пр-т Леси Украинки, 26</p>
 
-            <ul class="list">
-              <li>
-                <a href="mailto:info@devstudio.com " class="footer-contacts"
-                  >info@devstudio.com</a
+              <ul class="list">
+                <li>
+                  <a href="mailto:info@devstudio.com " class="footer-contacts"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li>
+                  <a href="tel:+380961111111 " class="footer-contacts"
+                    >+38 096 111 11 11
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="footer-box">
+            <b>Присоединяйтесь</b>
+            <ul class="networks list">
+              <li class="icon">
+                <a
+                  class="icon-netw icon-inst"
+                  href=""
+                  aria-label="Ссылка на Инстаграмм"
                 >
+                  <svg width="20" height="20" class="icon-instagram">
+                    <use href="./image/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li>
-                <a href="tel:+380961111111 " class="footer-contacts"
-                  >+38 096 111 11 11
+              <li class="icon">
+                <a
+                  class="icon-netw icon-twit"
+                  href=""
+                  aria-label="Ссылка на Твиттер"
+                >
+                  <svg width="20" height="20" class="icon-twitter">
+                    <use href="./image/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="icon">
+                <a
+                  class="icon-netw icon-fb"
+                  href=""
+                  aria-label="Ссылка на Фейсбук"
+                  ><svg width="20" height="20" class="icon-facebook">
+                    <use href="./image/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="icon">
+                <a
+                  class="icon-netw icon-link"
+                  href=""
+                  aria-label="Ссылка на Линкедин"
+                >
+                  <svg width="20" height="20" class="icon-linkedin">
+                    <use href="./image/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
-          </address>
-        </div>
-
-        <div class="footer-box">
-          <b>Присоединяйтесь</b>
-          <ul class="networks list">
-            <li class="icon">
-              <a
-                class="icon-netw icon-inst"
-                href=""
-                aria-label="Ссылка на Инстаграмм"
-              >
-                <svg width="20" height="20" class="icon-instagram">
-                  <use href="./image/symbol-defs.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="icon">
-              <a
-                class="icon-netw icon-twit"
-                href=""
-                aria-label="Ссылка на Твиттер"
-              >
-                <svg width="20" height="20" class="icon-twitter">
-                  <use href="./image/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="icon">
-              <a
-                class="icon-netw icon-fb"
-                href=""
-                aria-label="Ссылка на Фейсбук"
-                ><svg width="20" height="20" class="icon-facebook">
-                  <use href="./image/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="icon">
-              <a
-                class="icon-netw icon-link"
-                href=""
-                aria-label="Ссылка на Линкедин"
-              >
-                <svg width="20" height="20" class="icon-linkedin">
-                  <use href="./image/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
 
         <div class="footer-box sign-form">
@@ -383,20 +442,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
-    <script>
-      (() => {
-        document
-          .querySelector(".js-speaker-form")
-          .addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`)
-            );
-
-            e.currentTarget.reset();
-          });
-      })();
-    </script>
-  </body>
+    <script src="./js/menu.js"></script>
+     </body>
 </html>
